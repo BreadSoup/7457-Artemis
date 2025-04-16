@@ -49,9 +49,13 @@ public final class Constants {
   }
   public static class IndexerConstants{
 //*Indexer Subsystem Ports
-    public static final int IndexerCanID = 10;
+    public static final int indexerCanID = 10;
     public static final int frontSensorChannel = 0;
     public static final int backSensorChannel = 2;
-
+//*Indexer
+    //speeds
+    public static double indexerRunSpeed = 0.75;
+	  public static double indexerPurgeSpeed = -1;
+    public static double indexerShootSpeed = 1;
   }
 }

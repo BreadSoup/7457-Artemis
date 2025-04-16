@@ -36,7 +36,7 @@ public class IntakeSubsystem extends SubsystemBase {
   //its peak ezra trust the process
 
   public IntakeSubsystem() {
-    //TODO remove comment hell
+    //TODO remove comment hell and cleanup file as whole this is bad
     intakeMotor = new VictorSPX(IntakeConstants.intakeCanID);
     drawBridge = new TalonSRX(IntakeConstants.drawBridgeCanID);
     //drawBridgeEncoder = new CTRE_MagEncoder_Relative(FeedbackDevice.CTRE_MagEncoder_Relative);

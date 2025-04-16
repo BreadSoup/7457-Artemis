@@ -8,6 +8,7 @@ import frc.robot.Constants.OperatorConstants;
 //import frc.robot.commands.Autos;
 //import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.intake.*;
+import frc.robot.subsystems.IndexerSubsystem;
 //import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.IntakeSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -26,6 +27,7 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   //private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
   private final IntakeSubsystem m_Intake = new IntakeSubsystem();
+  private final IndexerSubsystem m_Indexer = new IndexerSubsystem();
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
   private final CommandXboxController m_driverController =
@@ -55,7 +57,7 @@ public class RobotContainer {
     // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
     // cancelling on release.
     m_driverController.y().onTrue(new LowerIntakeCommand(m_Intake));
-    m_driverController.rightBumper().whileTrue(new RunIntakeCommand(m_Intake));
+    m_driverController.rightBumper().whileTrue(new RunIntakeCommand(m_Intake, m_Indexer));
     m_driverController.b().onTrue(new RaiseIntakeCommand(m_Intake));
     m_driverController.x().whileTrue(new ResetIntakeCommand(m_Intake));
     m_driverController.a().onTrue(new IntakeFullStopCommand(m_Intake));
