@@ -47,6 +47,7 @@ public final class Constants {
     //config
     public static boolean drawBridgeInverted = true;
   }
+
   public static class IndexerConstants{
 //*Indexer Subsystem Ports
     public static final int indexerCanID = 10;
@@ -57,5 +58,19 @@ public final class Constants {
     public static double indexerRunSpeed = 0.75;
 	  public static double indexerPurgeSpeed = -1;
     public static double indexerShootSpeed = 1;
+  }
+
+  public static class ShooterConstants{
+
+    public static final int shooterCanID = 2;
+	  public static final int shooterCurrentLimit = 40;
+    public static final double shooterkP = 0.08;
+    public static final double shooterkI = 0;
+    public static final double shooterkD = 0;
+    //TODO placeholder values
+    public static final double shooterkS = 0; 
+    public static final double ShooterStableRPMTime = 0;
+    public static int shooterRPMTolerance = 10;
+
   }
 }
